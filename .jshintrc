@@ -1,0 +1,29 @@
+{
+  "node": true,
+  "browser": true,
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": false,
+  "curly": true,
+  "eqeqeq": true,
+  "newcap": false,
+  "immed": true,
+  "indent": 2,
+  "latedef": true,
+  "noarg": true,
+  "quotmark": "single",
+  "shadow": "inner",
+  "regexp": true,
+  "undef": true,
+  "unused": "vars",
+  "strict": true,
+  "trailing": true,
+  "smarttabs": true,
+  "mocha": true,
+  "phantom": true,
+  "withstmt": false,
+  "predef": [ "requirejs", "define", "require"],
+  "globals": {
+    "jQuery": false
+  }
+}

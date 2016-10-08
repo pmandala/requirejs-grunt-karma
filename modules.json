@@ -1,0 +1,10 @@
+{
+  "filerevs"  : [
+				  "css/main.css",
+				  "js/main.js"
+				],
+				
+  "requireJS" : [{
+                    "name" : "main"
+                }]
+}
