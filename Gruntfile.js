@@ -66,8 +66,8 @@ module.exports = function(grunt) {
                 livereload : 35729
             },
             proxies : [{
-                context: ['/zeppelin', '/api', '/webhdfs', '/userinfo', '/fs', '/uirest', '/ambari_rest'],
-                host: '10.252.137.203',
+                context: ['/api', '/userinfo'],
+                host: 'localhost',
                 port: 1080,
                 https: false,
                 rewrite: {
