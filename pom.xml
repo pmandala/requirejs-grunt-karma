@@ -3,16 +3,10 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <artifactId>spoccs-ui</artifactId>
-        <groupId>com.oracle.spoccs.ui</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
-    <groupId>com.oracle.spoccs</groupId>
-    <artifactId>spoccs-web</artifactId>
+    <groupId>com.we</groupId>
+    <artifactId>requirejs-grunt-karma</artifactId>
     <packaging>war</packaging>
-    <name>SpoCCS Web Application</name>
+    <name>Web Application</name>
 
     <!-- See https://github.com/eirslett/frontend-maven-plugin/issues/229 -->
     <prerequisites>
@@ -20,27 +14,10 @@
     </prerequisites>
 
     <properties>
-        <ojet.version>1.2.0-22069</ojet.version>
         <node.version>v0.12.13</node.version>
         <npm.version>2.15.0</npm.version>
     </properties>
-
-    <!-- <dependencies>
-        <dependency>
-            <groupId>com.oracle.oraclejet</groupId>
-            <artifactId>oraclejet-min</artifactId>
-            <version>${ojet.version}</version>
-            <type>war</type>
-        </dependency>
-    </dependencies> -->
-    
-    <dependencies>
-    	<dependency>
-            <groupId>oracle.spoccs.common</groupId>
-            <artifactId>spoccs-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-	</dependencies>
+   
 
     <build>
         <plugins>
@@ -190,23 +167,6 @@
     </build>
 
     <profiles>
-        <!-- <profile>
-            <id>ojet-profile</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <repositories>
-                <repository>
-                    <id>ojet-artifactory</id>
-                    <url>http://artifactory-slc.oraclecorp.com/artifactory/ojet-release-local/</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
-        </profile> -->
-
-
         <profile>
             <id>rpm</id>
             <build>
@@ -225,13 +185,13 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <name>spoccs-web.rpm</name>
+                            <name>web.rpm</name>
                             <release>v1</release>
                             <license>Oracle 2016</license>
                             <group>All</group>
                             <mappings>
                                 <mapping>
-                                    <directory>/spoccs</directory>
+                                    <directory>/webui</directory>
                                     <filemode>644</filemode>
                                     <sources>
                                         <source>
