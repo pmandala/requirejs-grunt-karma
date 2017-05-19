@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.we</groupId>
+    <groupId>com.web</groupId>
     <artifactId>requirejs-grunt-karma</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Web Application</name>
 
@@ -17,7 +17,6 @@
         <node.version>v0.12.13</node.version>
         <npm.version>2.15.0</npm.version>
     </properties>
-   
 
     <build>
         <plugins>
@@ -127,8 +126,8 @@
                 </executions>
             </plugin>
 
-            <!-- Disabling test report generation as it forks the lifecycle 
-                and results in https://issues.apache.org/jira/browse/ZEPPELIN-69 There is 
+            <!-- Disabling test report generation as it forks the lifecycle
+                and results in https://issues.apache.org/jira/browse/ZEPPELIN-69 There is
                 no better way to do it, as per http://jira.codehaus.org/browse/MCOBERTURA-154 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

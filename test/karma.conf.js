@@ -17,77 +17,74 @@ module.exports = function(config) {
 
         // base path that will be used to resolve all patterns (eg. files,
         // exclude)
-        basePath : '../',
+        basePath: '../',
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         // testing framework to use (jasmine/mocha/qunit/...)
-        frameworks : [ 'mocha', 'requirejs' ],
+        frameworks: ['mocha', 'requirejs'],
 
         // list of files / patterns to load in the browser
-        files : [
+        files: [
 
-        {
-            pattern : "src/js/**/*.js",
-            included : false
-        }, {
-            pattern : "src/js/**/*.tmpl.html",
-            included : false
-        }, {
-            pattern : "node_modules/chai/chai.js",
-            included : false
-        }, {
-            pattern : "node_modules/sinon/pkg/**/*.js",
-            included : false
-        }, {
-            pattern : 'test/spec/**/*.js',
-            included : false
-        }, {
-            pattern : 'test/karma-test-css-main.js',
-            included : false
-        }, {
-            pattern : 'src/css/**/alta/oj-alta-min.css',
-            included : false
-        },{
-            pattern : 'src/css/**/main.css',
-            included : false
-        },
+            {
+                pattern: "src/js/**/*.js",
+                included: false
+            }, {
+                pattern: "src/js/**/*.tmpl.html",
+                included: false
+            }, {
+                pattern: "node_modules/chai/chai.js",
+                included: false
+            }, {
+                pattern: "node_modules/sinon/pkg/**/*.js",
+                included: false
+            }, {
+                pattern: 'test/spec/**/*.js',
+                included: false
+            }, {
+                pattern: 'test/karma-test-css-main.js',
+                included: false
+            }, {
+                pattern: 'src/css/**/main.css',
+                included: false
+            },
 
-        'test/karma-test-main.js'
+            'test/karma-test-main.js'
 
         ],
 
         // list of files to exclude
-        exclude : [ 'src/js/main.js', 
-                    'src/js/libs/require/require-debug.js',
-                    'src/js/libs/require/require.js' ],
+        exclude: ['src/js/main.js',
+            'src/js/libs/require/require.js'
+        ],
 
 
         // preprocess matching files before serving them to the browser
         // available preprocessors:
         // https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors : {},
+        preprocessors: {},
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         // reporters: ['progress', 'mp3', 'html'],
-        reporters : [ 'progress', 'html' ],
+        reporters: ['progress', 'html'],
 
         // web server port
-        port : 9876,
+        port: 9876,
 
         // enable / disable colors in the output (reporters and logs)
-        colors : true,
+        colors: true,
 
         // level of logging
         // possible values: config.LOG_DISABLE || config.LOG_ERROR ||
         // config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel : config.LOG_INFO,
+        logLevel: config.LOG_INFO,
 
         // enable / disable watching file and executing tests whenever any file
         // changes
-        autoWatch : true,
+        autoWatch: true,
 
         // start these browsers
         // available browser launchers:
@@ -100,33 +97,34 @@ module.exports = function(config) {
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers : [ 'PhantomJS' ],
+        browsers: ['PhantomJS'],
 
         // Which plugins to enable
-        plugins : [ 'karma-requirejs', 
-                    'karma-phantomjs-launcher',
-                    'karma-mocha', 
-                    'karma-htmlfile-reporter', 
-                    'karma-coverage' ],
+        plugins: ['karma-requirejs',
+            'karma-phantomjs-launcher',
+            'karma-mocha',
+            'karma-htmlfile-reporter',
+            'karma-coverage'
+        ],
 
-        htmlReporter : {
-            outputFile : './target/unit-test-report.html',
+        htmlReporter: {
+            outputFile: './target/unit-test-report.html',
 
-            pageTitle : 'Unit Tests',
-            subPageTitle : 'Spoccs'
+            pageTitle: 'Unit Tests',
+            subPageTitle: 'Spoccs'
         },
 
-        coverageReporter : {
-            type : 'html',
-            dir : './target/reports/spoccs-web-coverage',
-            subdir : '.'
+        coverageReporter: {
+            type: 'html',
+            dir: './target/reports/web-coverage',
+            subdir: '.'
         },
 
         // If browser does not capture in given timeout [ms], kill it
-        captureTimeout : 60000,
+        captureTimeout: 60000,
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun : false
+        singleRun: false
     })
 }

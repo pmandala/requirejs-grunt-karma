@@ -15,39 +15,39 @@
     console.log('\n' + allTestFiles.join('\n'));
 
     requirejs
-            .config({
+        .config({
 
-                baseUrl : '/base',
+            baseUrl: '/base',
 
-                paths : {
-                    'jquery' : 'src/js/libs/jquery/jquery-2.1.3.min',
-                    'text' : 'src/js/libs/require/text',
-                    'test_css' : 'test/karma-test-css-main',
-                    'app' : 'src/js/app',
+            paths: {
+                'jquery': 'src/js/libs/jquery/jquery-2.1.3.min',
+                'text': 'src/js/libs/require/text',
+                'test_css': 'test/karma-test-css-main',
+                'app': 'src/js/app',
 
-                    'chai' : 'node_modules/chai/chai',
-                    'sinon' : 'node_modules/sinon/pkg/sinon'
-                },
+                'chai': 'node_modules/chai/chai',
+                'sinon': 'node_modules/sinon/pkg/sinon'
+            },
 
-                // Shim configurations for modules that do not expose AMD
-                shim : {
-                    'jquery' : {
-                        exports : [ 'jQuery', '$' ]
-                    }
-                },
+            // Shim configurations for modules that do not expose AMD
+            shim: {
+                'jquery': {
+                    exports: ['jQuery', '$']
+                }
+            },
 
-                config : {
-                    /*
-                     * i18n: { locale: 'fr-fr' },
-                     */
-                    
-                },
-                // ask Require.js to load these files (all our tests)
-                deps : ['test_css'].concat(allTestFiles),
+            config: {
+                /*
+                 * i18n: { locale: 'fr-fr' },
+                 */
 
-                // start test run, once Require.js is done
-                callback : window.__karma__.start
+            },
+            // ask Require.js to load these files (all our tests)
+            deps: ['test_css'].concat(allTestFiles),
 
-            });
+            // start test run, once Require.js is done
+            callback: window.__karma__.start
+
+        });
 
 })(window);

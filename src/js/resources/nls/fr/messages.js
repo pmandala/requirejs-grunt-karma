@@ -1,10 +1,8 @@
 define({
 
-    'common' : {
-
-        'add' : 'Add',
-        'delete' : 'Delete'
-
+    'common': {
+        'add': 'Add',
+        'delete': 'Delete'
     }
 
 });

@@ -1,13 +1,12 @@
 define({
 
-    'root' : {
-        
-        'common' : {
+    'root': {
 
-            'add' : 'Add',
-            'delete' : 'Delete'
-
+        'common': {
+            'add': 'Add',
+            'delete': 'Delete'
         }
+    },
 
-    'fr' : true
+    'fr': true
 });
